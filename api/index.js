@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 const jwt = require('jsonwebtoken');
 
 mongoose
-  .connect('mongodb+srv://sujan:sujan@cluster0.n87php1.mongodb.net/')
+  .connect('')
   .then(() => {
     console.log('Connected to Mongo Db');
   })

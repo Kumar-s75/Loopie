@@ -134,7 +134,7 @@ const TripPlanScreen = () => {
   const [selectedDate, setSelectedDate] = useState('');
 
   const fetchPlaceDetails = async placeId => {
-    const API_KEY = 'AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI'; // Replace with your API key
+    const API_KEY = ''; // Replace with your API key
     const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${API_KEY}`;
 
     try {
