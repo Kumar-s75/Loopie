@@ -43,7 +43,7 @@
       },
       "config": {
         "googleSignIn": {
-          "reservedClientId": "847080271209-tugpe7mjovatdv0gp9dkdcdtdhinmpd3.apps.googleusercontent.com"
+          "reservedClientId": "GOOGLE_IOS_CLIENT_ID_PLACEHOLDER"
         }
       }
     },
@@ -59,10 +59,10 @@
       ],
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI"
+          "apiKey": "GOOGLE_MAPS_API_KEY_PLACEHOLDER"
         },
         "googleSignIn": {
-          "apiKey": "AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI",
+          "apiKey": "GOOGLE_PLACES_API_KEY_PLACEHOLDER",
           "certificateHash": "YOUR_CERTIFICATE_HASH"
         }
       }

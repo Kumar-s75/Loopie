@@ -9,15 +9,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-			<string>com.googleusercontent.apps.YOUR_WEB_CLIENT_ID</string>
-			<string>com.googleusercontent.apps.847080271209-tugpe7mjovatdv0gp9dkdcdtdhinmpd3</string>
+			<string>com.googleusercontent.apps.GOOGLE_WEB_CLIENT_ID_PLACEHOLDER</string>
+			<string>com.googleusercontent.apps.GOOGLE_IOS_CLIENT_ID_PLACEHOLDER</string>
 		</array>
     </dict>
     </array>
     <key>GIDClientID</key>
-    <string>847080271209-tugpe7mjovatdv0gp9dkdcdtdhinmpd3.apps.googleusercontent.com</string>
+    <string>GOOGLE_IOS_CLIENT_ID_PLACEHOLDER</string>
     <key>GIDRedirectURI</key>
-    <string>com.googleusercontent.847080271209-tugpe7mjovatdv0gp9dkdcdtdhinmpd3:/oauth2redirect/google</string>
+    <string>com.googleusercontent.GOOGLE_IOS_CLIENT_ID_PLACEHOLDER:/oauth2redirect/google</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

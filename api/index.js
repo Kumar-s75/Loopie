@@ -6,6 +6,7 @@ const moment = require('moment');
 const nodemailer = require('nodemailer');
 
 const axios = require('axios');
+require('dotenv').config();
 
 const app = express();
 const port = 8000;
@@ -94,7 +95,11 @@ app.post('/trip/:tripId/addPlace', async (req, res) => {
   const {tripId} = req.params;
   const {placeId} = req.body;
 
-  const API_KEY = 'AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI';
+  const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
+
+  if (!API_KEY) {
+    return res.status(500).json({error: 'Google Places API key not configured'});
+  }
 
   try {
     // Fetch place details from Google Places API

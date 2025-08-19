@@ -22,6 +22,7 @@ import {BottomModal} from 'react-native-modals';
 import {SlideAnimation} from 'react-native-modals';
 import {ModalContent} from 'react-native-modals';
 import moment from 'moment';
+import Config from 'react-native-config';
 
 const DefineActivity = ({}) => {
   const route = useRoute();
@@ -50,7 +51,13 @@ const DefineActivity = ({}) => {
   }, []);
 
   const fetchPlaceDetails = async placeId => {
-    const API_KEY = 'AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI'; // Replace with your API key
+    const API_KEY = Config.GOOGLE_PLACES_API_KEY;
+    
+    if (!API_KEY) {
+      console.error('Google Places API key not configured');
+      return;
+    }
+    
     const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${API_KEY}`;
 
     try {
@@ -251,7 +258,7 @@ const DefineActivity = ({}) => {
                   }
                 }}
                 query={{
-                  key: 'AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI', // Replace with your API key
+                  key: Config.GOOGLE_PLACES_API_KEY,
                   language: 'en',
                 }}
               />
@@ -348,7 +355,7 @@ const DefineActivity = ({}) => {
           {photos && (
             <PhotoGallery
               photos={photos}
-              apiKey={'AIzaSyCOZJadVuwlJvZjl_jWMjEvJDbbc17fQQI'}
+              apiKey={Config.GOOGLE_PLACES_API_KEY}
             />
           )}
         </ScrollView>
