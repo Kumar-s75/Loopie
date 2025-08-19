@@ -77,3 +77,46 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+## Environment Setup
+
+### API Keys Configuration
+
+This app requires several API keys to function properly. Follow these steps to configure them:
+
+1. **Copy the environment file:**
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Get your Google API keys:**
+   - Go to [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select an existing one
+   - Enable the following APIs:
+     - Google Places API
+     - Google Maps SDK for Android/iOS
+     - Google Sign-In API
+   - Create credentials for each API
+
+3. **Update the .env file with your actual API keys:**
+   ```
+   GOOGLE_PLACES_API_KEY=your_actual_google_places_api_key
+   GOOGLE_WEB_CLIENT_ID=your_actual_google_web_client_id
+   GOOGLE_IOS_CLIENT_ID=your_actual_google_ios_client_id
+   GOOGLE_MAPS_API_KEY=your_actual_google_maps_api_key
+   ```
+
+4. **For the backend API (api folder):**
+   - Copy the .env.example file in the api directory
+   - Add your Google Places API key to the backend .env file
+
+5. **Update app.json placeholders:**
+   - Replace the placeholder values in app.json with your actual API keys
+   - Update iOS Info.plist placeholders with your actual client IDs
+
+### Security Notes
+
+- Never commit actual API keys to version control
+- Use different API keys for development and production
+- Restrict API keys to specific services and domains in Google Cloud Console
+- Regularly rotate your API keys for security

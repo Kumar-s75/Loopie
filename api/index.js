@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 const jwt = require('jsonwebtoken');
 
 mongoose
-  .connect('')
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to Mongo Db');
   })

@@ -355,7 +355,7 @@ const DefineActivity = ({}) => {
           {photos && (
             <PhotoGallery
               photos={photos}
-              apiKey={Config.GOOGLE_PLACES_API_KEY}
+              apiKey={API_KEYS.GOOGLE_PLACES}
             />
           )}
         </ScrollView>
